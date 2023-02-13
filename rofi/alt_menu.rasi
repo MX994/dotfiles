@@ -1,0 +1,86 @@
+configuration {
+	modi:                       "window";
+    show-icons:                 true;
+	window-format:              "{t}";
+}
+
+* {
+    font:                        "JetBrains Mono Nerd Font 10";
+    background:                  #180F39;
+    background-alt:              #32197D;
+    foreground:                  #FFFFFF;
+    selected:                    #FF00F1;
+    active:                      #9878FF;
+    urgent:                      #7D0075;
+    background-color:            @background;
+}
+
+window {
+    anchor:                      center;
+    location:                    center;
+    fullscreen:                  false;
+    height:                      360px;
+    width:                       720px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    enabled:                     true;
+    border-radius:               15px;
+    cursor:                      "default";
+}
+
+element {
+    enabled:                     true;
+    padding:                     8px;
+    border-radius:               10px;
+    background-color:            @background;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+
+element normal.normal {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+element normal.urgent {
+    background-color:            @selected;
+    text-color:                  @foreground;
+}
+
+element normal.active {
+    background-color:            @active;
+    text-color:                  @foreground;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @foreground;
+}
+
+element selected.urgent {
+    background-color:            @selected;
+    text-color:                  @foreground;
+}
+
+element selected.active {
+    background-color:            @selected;
+    text-color:                  @foreground;
+}
+
+element-icon {
+    background-color:            transparent;
+    text-color:                  @foreground;
+    size:                        64px;
+    cursor:                      inherit;
+}
+
+element-text {
+    background-color:            @background;
+    text-color:                  @foreground;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+
